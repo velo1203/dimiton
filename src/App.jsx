@@ -147,17 +147,17 @@ const TimeLeftText = styled.div`
     letter-spacing: -3px;
 
     @media (max-width: 1024px) {
-        font-size: 80px;
+        font-size: 72px;
         letter-spacing: -2px;
     }
 
     @media (max-width: 768px) {
-        font-size: 56px;
+        font-size: 48px;
         letter-spacing: -1.5px;
     }
 
     @media (max-width: 480px) {
-        font-size: 40px;
+        font-size: 36px;
         letter-spacing: -1px;
     }
 `;
