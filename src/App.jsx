@@ -345,8 +345,8 @@ const hackathonStart = new Date("2025-10-24T17:10:00");
 const hackathonEnd = new Date("2025-10-26T21:00:00");
 
 // 테스트 모드: true로 설정하면 현재 시간 기준으로 테스트 가능
-const TEST_MODE = true;
-const testStartTime = new Date(); // 해커톤 시작 시간 설정
+const TEST_MODE = false; //매우중요
+const testStartTime = new Date(); // 해커톤 시  작 시간 설정
 const testEndTime = new Date(); // 해커톤 종료 시간 설정
 // setDate의 값을 조정해서 다른 날짜 테스트:
 // -1: 어제 시작 (2일차 확인용)
