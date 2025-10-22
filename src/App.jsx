@@ -116,61 +116,71 @@ const DdayContainer = styled.div`
 `;
 
 const DdayText = styled.div`
-    font-size: 120px;
+    font-size: 200px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     color: #000000;
     letter-spacing: -4px;
 
     @media (max-width: 1024px) {
         font-size: 96px;
         letter-spacing: -3px;
+        margin-bottom: 32px;
     }
 
     @media (max-width: 768px) {
         font-size: 72px;
         letter-spacing: -2px;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
 
     @media (max-width: 480px) {
         font-size: 56px;
+        margin-bottom: 20px;
     }
 `;
 
 const TimeLeftText = styled.div`
-    font-size: 28px;
-    color: #4a4a4a;
+    font-size: 52px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: -3px;
 
     @media (max-width: 1024px) {
-        font-size: 24px;
+        font-size: 80px;
+        letter-spacing: -2px;
     }
 
     @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 56px;
+        letter-spacing: -1.5px;
     }
 
     @media (max-width: 480px) {
-        font-size: 18px;
+        font-size: 40px;
+        letter-spacing: -1px;
     }
 `;
 
 const CurrentScheduleText = styled.h2`
-    margin-bottom: 8px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #0a0a0a;
+    margin: 32px 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: #444444;
 
     @media (max-width: 1024px) {
-        font-size: 24px;
+        font-size: 40px;
+        margin-top: 28px;
     }
 
     @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 32px;
+        margin-top: 24px;
     }
 
     @media (max-width: 480px) {
-        font-size: 18px;
+        font-size: 24px;
+        margin-top: 20px;
     }
 `;
 
