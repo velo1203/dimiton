@@ -143,7 +143,7 @@ const DdayText = styled.div`
 const TimeLeftText = styled.div`
     font-size: 52px;
     font-weight: 600;
-    color: #000000;
+    color: #393939;
     letter-spacing: -3px;
 
     @media (max-width: 1024px) {
