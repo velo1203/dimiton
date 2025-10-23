@@ -58,6 +58,28 @@ const Header = styled.header`
 const Logo = styled.img`
     width: 120px;
     height: 120px;
+    animation: heartbeat 1.2s ease-in-out infinite;
+
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        10% {
+            transform: scale(1.1);
+        }
+        20% {
+            transform: scale(1);
+        }
+        30% {
+            transform: scale(1.1);
+        }
+        40% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 
     @media (max-width: 768px) {
         width: 50px;
