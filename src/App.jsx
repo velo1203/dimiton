@@ -101,7 +101,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-    font-size: 24px;
+    font-size: 32px;
     color: #6b6b6b;
     font-weight: 400;
 
