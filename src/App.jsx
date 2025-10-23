@@ -67,7 +67,7 @@ const Logo = styled.img`
 `;
 
 const Title = styled.h1`
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 700;
     margin-bottom: 16px;
     color: #000000;
@@ -106,9 +106,14 @@ const Subtitle = styled.p`
 `;
 
 const DdayContainer = styled.div`
+    position: relative;
     text-align: center;
     width: 100%;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: 768px) {
         padding: 0 16px;
@@ -121,6 +126,28 @@ const DdayText = styled.div`
     margin-bottom: 40px;
     color: #000000;
     letter-spacing: -4px;
+    animation: heartbeat 1.2s ease-in-out infinite;
+
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        10% {
+            transform: scale(1.1);
+        }
+        20% {
+            transform: scale(1);
+        }
+        30% {
+            transform: scale(1.1);
+        }
+        40% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 
     @media (max-width: 1024px) {
         font-size: 96px;
@@ -163,24 +190,26 @@ const TimeLeftText = styled.div`
 `;
 
 const CurrentScheduleText = styled.h2`
-    margin: 32px 0;
+    margin-top: 60px;
     font-size: 62px;
     font-weight: 600;
     color: #000000;
+    white-space: nowrap;
 
     @media (max-width: 1024px) {
         font-size: 40px;
-        margin-top: 28px;
+        margin-top: 50px;
     }
 
     @media (max-width: 768px) {
         font-size: 32px;
-        margin-top: 24px;
+        margin-top: 40px;
+        white-space: normal;
     }
 
     @media (max-width: 480px) {
         font-size: 24px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 `;
 
@@ -644,12 +673,13 @@ function App() {
                                 ? "D-DAY"
                                 : `D+${Math.abs(dday)}`}
                         </DdayText>
+
+                        <TimeLeftText>{timeLeft}</TimeLeftText>
                         {currentSchedule && (
                             <CurrentScheduleText>
                                 {currentSchedule.content}
                             </CurrentScheduleText>
                         )}
-                        <TimeLeftText>{timeLeft}</TimeLeftText>
                     </DdayContainer>
                 </MainContainer>
 
