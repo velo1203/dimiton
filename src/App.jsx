@@ -181,7 +181,8 @@ const TimeLeftText = styled.div`
 `;
 
 const CurrentScheduleText = styled.h2`
-    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-top: 20px;
     font-size: 62px;
     font-weight: 600;
     color: #000000;
