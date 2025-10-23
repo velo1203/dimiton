@@ -1,5 +1,26 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const heartbeat = keyframes`
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.2);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+`;
 
 const AppContainer = styled.div`
     min-height: 100vh;
@@ -8,7 +29,6 @@ const AppContainer = styled.div`
     font-family: "Pretendard Variable", Pretendard, -apple-system,
         BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
         "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    padding: 20px;
 
     @media (max-width: 768px) {
         padding: 40px 16px;
@@ -26,60 +46,31 @@ const MainContainer = styled.div`
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+    padding: 20px;
 
     @media (max-width: 768px) {
-        padding: 0 16px;
-        min-height: 100vh;
-        height: auto;
+        padding: 30px 16px;
     }
 `;
 
 const Header = styled.header`
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
+    margin-bottom: 60px;
 
     @media (max-width: 768px) {
-        padding: 0 16px;
+        margin-bottom: 40px;
     }
 `;
 
 const Logo = styled.img`
-    width: 150px;
-    height: 150px;
-    animation: heartbeat 1.2s ease-in-out infinite;
-
-    @keyframes heartbeat {
-        0% {
-            transform: scale(1);
-        }
-        10% {
-            transform: scale(1.1);
-        }
-        20% {
-            transform: scale(1);
-        }
-        30% {
-            transform: scale(1.1);
-        }
-        40% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    animation: ${heartbeat} 1.2s ease-in-out infinite;
 
     @media (max-width: 768px) {
         width: 50px;
@@ -131,14 +122,13 @@ const DdayContainer = styled.div`
     position: relative;
     text-align: center;
     width: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     @media (max-width: 768px) {
-        padding: 0 16px;
+        text-align: center;
+        align-items: center;
     }
 `;
 
@@ -148,28 +138,7 @@ const DdayText = styled.div`
     margin-bottom: 40px;
     color: #000000;
     letter-spacing: -4px;
-    animation: heartbeat 1.2s ease-in-out infinite;
-
-    @keyframes heartbeat {
-        0% {
-            transform: scale(1);
-        }
-        10% {
-            transform: scale(1.1);
-        }
-        20% {
-            transform: scale(1);
-        }
-        30% {
-            transform: scale(1.1);
-        }
-        40% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
+    animation: ${heartbeat} 1.2s ease-in-out infinite;
 
     @media (max-width: 1024px) {
         font-size: 96px;
@@ -684,7 +653,9 @@ function App() {
                             alt="2025 디미고 창업동아리  연합 스타트업톤 로고"
                         />
                         <Title>2025 디미고 창업동아리 연합 스타트업톤</Title>
-                        <Subtitle>10월 24일 (금) ~ 26일 (일)</Subtitle>
+                        <Subtitle>
+                            10월 24일 (금)~10월 26일 (일), 2박 3일
+                        </Subtitle>
                     </Header>
 
                     <DdayContainer>
