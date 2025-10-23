@@ -8,7 +8,7 @@ const AppContainer = styled.div`
     font-family: "Pretendard Variable", Pretendard, -apple-system,
         BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
         "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    padding: 60px 20px;
+    padding: 20px;
 
     @media (max-width: 768px) {
         padding: 40px 16px;
@@ -56,8 +56,8 @@ const Header = styled.header`
 `;
 
 const Logo = styled.img`
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     animation: heartbeat 1.2s ease-in-out infinite;
 
     @keyframes heartbeat {
