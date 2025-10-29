@@ -67,9 +67,10 @@ const Header = styled.header`
 `;
 
 const Logo = styled.img`
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     animation: ${heartbeat} 1.2s ease-in-out infinite;
 
     @media (max-width: 768px) {
@@ -372,8 +373,8 @@ const LocationText = styled.div`
 
 // 해커톤 시작 시간: 2025년 10월 24일 (금) 17:10
 // 해커톤 종료 시간: 2025년 10월 26일 (일) 21:00
-const hackathonStart = new Date("2025-10-24T17:10:00");
-const hackathonEnd = new Date("2025-10-26T21:00:00");
+const hackathonStart = new Date("2025-11-13T00:00:00");
+const hackathonEnd = new Date("2025-11-15T00:00:00");
 
 // 테스트 모드: true로 설정하면 현재 시간 기준으로 테스트 가능
 const TEST_MODE = false; //매우중요
@@ -653,10 +654,8 @@ function App() {
                             src="/logo.png"
                             alt="2025 디미고 창업동아리  연합 스타트업톤 로고"
                         />
-                        <Title>2025 디미고 창업동아리 연합 스타트업톤</Title>
-                        <Subtitle>
-                            10월 24일 (금)~10월 26일 (일), 2박 3일
-                        </Subtitle>
+                        <Title>2026 대학수학능력시험</Title>
+                        <Subtitle>2025년 11월 13일(목)</Subtitle>
                     </Header>
 
                     <DdayContainer>
